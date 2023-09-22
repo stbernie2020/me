@@ -9,7 +9,7 @@ jobs:
     steps:
     - name: Install yt-dlp
       run: |
-        scoop install yt-dlp
+        winget install yt-dlp
     - name: Get abcnewsau.m3u8
       run: |
         touch ./abcnewsau.m3u8
