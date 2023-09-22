@@ -45,7 +45,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(yt-dlp -g -f hls-4 https://www.dailymotion.com/embed/video/x8chy4s)
+        $(yt-dlp --proxy socks5://9Pri1bvM:tTTXgWaOxzYG@sin.socks.ipvanish.com:1080 -g -f 720p https://www.twitch.tv/antv_digimed)
         EOL
     - name: Get arirangtv.m3u8
       run: |
@@ -162,7 +162,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=540000
-        $(yt-dlp -g https://ok.ru/video/3099174903444)
+        $(yt-dlp --proxy socks5://9Pri1bvM:tTTXgWaOxzYG@sin.socks.ipvanish.com:1080 -g -f 2129 https://ok.ru/video/4403826925204)
         EOL
     - name: Get metrotv.m3u8
       run: |
@@ -190,15 +190,6 @@ jobs:
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
         $(yt-dlp -g -f 94 https://youtu.be/7tNtU5XFwrU)
-        EOL
-    - name: Get nettv.m3u8
-      run: |
-        touch ./nettv.m3u8
-        sudo cat >./nettv.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=540000
-        $(yt-dlp -g -f 95 https://www.youtube.com/channel/UC1-ATnDVEwKT6-0aEeJ2ibA/live)
         EOL
     - name: Get radiometal.m3u8
       run: |
