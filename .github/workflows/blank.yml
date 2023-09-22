@@ -5,11 +5,11 @@ on:
   workflow_dispatch:
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-20.04.1
     steps:
     - name: Install yt-dlp
       run: |
-        sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/download/2022.04.08/yt-dlp -o /usr/local/bin/yt-dlp
+        sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/download/2022.11.11/yt-dlp -o /usr/local/bin/yt-dlp
         sudo chmod a+rx /usr/local/bin/yt-dlp
     - name: Get abcnewsau.m3u8
       run: |
