@@ -18,3 +18,7 @@ jobs:
         D:\a\me\me\hello\yt-dlp.exe -g -f 95 https://www.youtube.com/c/NewsOnABC/live > D:\a\me\me\hello\abcnewsau.m3u8
         dir
         type D:\a\me\me\hello\abcnewsau.m3u8
+        dir D:\a\me\me\hello\
+        dir D:\a\me\me\
+        dir D:\a\me\
+        dir D:\a\
