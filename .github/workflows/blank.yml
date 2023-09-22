@@ -10,15 +10,24 @@ jobs:
     - name: Install yt-dlp
       run: |
         md D:\a\me\me\hello
-        dir
+
         curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp.exe -o D:\a\me\me\hello\yt-dlp.exe
-        dir
+
     - name: Get abcnewsau.m3u8
       run: |
         D:\a\me\me\hello\yt-dlp.exe -g -f 95 https://www.youtube.com/c/NewsOnABC/live > D:\a\me\me\hello\abcnewsau.m3u8
-        dir
-        type D:\a\me\me\hello\abcnewsau.m3u8
-        dir D:\a\me\me\hello\
-        dir D:\a\me\me\
-        dir D:\a\me\
-        dir D:\a\
+    - name : Upload artifact
+      uses: actions/upload-artifact@master
+      with:
+        name: YTlive m3u8
+        path: .
+    - name: Git push assets to "YTlive" branch
+      run: |
+        git init
+        git config --local user.name "actions"
+        git config --local user.email "action@github.com"
+        git checkout -b YTlive
+        git add .
+        git commit -m "Update YTlive"
+        git remote add origin "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
+        git push -f -u origin YTlive
