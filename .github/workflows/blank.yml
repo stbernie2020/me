@@ -9,20 +9,16 @@ jobs:
     steps:
     - name: Install yt-dlp
       run: |
-        curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp.exe -o D:\a\stbernie2020\me\yt-dlp.exe
+        md D:\a\me\me\hello
+        dir
+        curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp.exe -o D:\a\me\me\hello\yt-dlp.exe
         dir
     - name: Get abcnewsau.m3u8
       run: |
-        D:\a\stbernie2020\me\yt-dlp.exe -g -f 95 https://www.youtube.com/c/NewsOnABC/live > D:\a\stbernie2020\me\abcnewsau.m3u8
+        D:\a\stbernie2020\me\hello\yt-dlp.exe -g -f 95 https://www.youtube.com/c/NewsOnABC/live > D:\a\me\me\hello\abcnewsau.m3u8
         dir
-        type D:\a\stbernie2020\me\abcnewsau.m3u8
+        type D:\a\me\me\hello\abcnewsau.m3u8
     - name: Get indosiar.m3u8
       run: |
-        D:\a\me\me\yt-dlp.exe --no-check-certificates --proxy socks5://9Pri1bvM:tTTXgWaOxzYG@sin.socks.ipvanish.com:1080/ -g http://vidio.com/live/205-indosiar > D:\a\me\me\indosiar.m3u8
-    - name: Get idol.m3u8
-      run: |
-        D:\a\me\me\yt-dlp.exe --no-check-certificates --proxy socks5://9Pri1bvM:tTTXgWaOxzYG@sin.socks.ipvanish.com:1080/ -g -f 480p http://twitch.tv/nihonongakukaitv > D:\a\me\me\idol.m3u8
-    - name: Get antv.m3u8
-      run: |
-        D:\a\me\me\yt-dlp.exe --no-check-certificates --proxy socks5://9Pri1bvM:tTTXgWaOxzYG@sin.socks.ipvanish.com:1080/ -g -f 720p https://www.twitch.tv/antv_digimed > D:\a\me\me\antv.m3u8
-
+        D:\a\me\me\hello\yt-dlp.exe  -g http://vidio.com/live/205-indosiar > D:\a\me\me\hello\indosiar.m3u8
+         dir
