@@ -236,15 +236,6 @@ jobs:
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
         $(yt-dlp --proxy socks5://9Pri1bvM:tTTXgWaOxzYG@sin.socks.ipvanish.com:1080/ -g https://vidio.com/live/204-sctv)
         EOL
-    - name: Get skynews.m3u8
-      run: |
-        touch ./skynews.m3u8
-        sudo cat >./skynews.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(yt-dlp --proxy socks5://9Pri1bvM:tTTXgWaOxzYG@lon.socks.ipvanish.com:1080/ -g -f 95 https://youtu.be/9Auq9mYxFEE)
-        EOL
     - name: Get trtworld.m3u8
       run: |
         touch ./trtworld.m3u8
