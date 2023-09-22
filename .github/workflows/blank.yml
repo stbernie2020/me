@@ -12,15 +12,15 @@ jobs:
         curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp.exe -o yt-dlp.exe
     - name: Get abcnewsau.m3u8
       run: |
-        yt-dlp -g -f 95 https://www.youtube.com/c/NewsOnABC/live > abcnewsau.m3u8
+        yt-dlp.exe -g -f 95 https://www.youtube.com/c/NewsOnABC/live > abcnewsau.m3u8
 
     - name: Get indosiar.m3u8
       run: |
-        yt-dlp --no-check-certificates --proxy socks5://9Pri1bvM:tTTXgWaOxzYG@sin.socks.ipvanish.com:1080/ -g http://vidio.com/live/205-indosiar > indosiar.m3u8
+        yt-dlp.exe --no-check-certificates --proxy socks5://9Pri1bvM:tTTXgWaOxzYG@sin.socks.ipvanish.com:1080/ -g http://vidio.com/live/205-indosiar > indosiar.m3u8
     - name: Get idol.m3u8
       run: |
-        yt-dlp --no-check-certificates --proxy socks5://9Pri1bvM:tTTXgWaOxzYG@sin.socks.ipvanish.com:1080/ -g -f 480p http://twitch.tv/nihonongakukaitv > idol.m3u8
+        yt-dlp.exe --no-check-certificates --proxy socks5://9Pri1bvM:tTTXgWaOxzYG@sin.socks.ipvanish.com:1080/ -g -f 480p http://twitch.tv/nihonongakukaitv > idol.m3u8
     - name: Get antv.m3u8
       run: |
-        yt-dlp --no-check-certificates --proxy socks5://9Pri1bvM:tTTXgWaOxzYG@sin.socks.ipvanish.com:1080/ -g -f 720p https://www.twitch.tv/antv_digimed > antv.m3u8
+        yt-dlp.exe --no-check-certificates --proxy socks5://9Pri1bvM:tTTXgWaOxzYG@sin.socks.ipvanish.com:1080/ -g -f 720p https://www.twitch.tv/antv_digimed > antv.m3u8
 
