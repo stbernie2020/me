@@ -1,0 +1,308 @@
+name: Get YouTube Live m3u8
+on:
+  schedule:
+    - cron: "0 */3 * * *"
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+    - name: Install youtube-dl
+      run: |
+        sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+        sudo chmod a+rx /usr/local/bin/youtube-dl
+    - name: Get abcnewsau.m3u8
+      run: |
+        touch ./abcnewsau.m3u8
+        sudo cat >./abcnewsau.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(youtube-dl -g -f 95 https://www.youtube.com/c/NewsOnABC/live)
+        EOL
+    - name: Get abcnewsus.m3u8
+      run: |
+        touch ./abcnewsus.m3u8
+        sudo cat >./abcnewsus.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(youtube-dl -g -f 95 https://www.youtube.com/c/ABCNews/live)
+        EOL
+    - name: Get aljazeera.m3u8
+      run: |
+        touch ./aljazeera.m3u8
+        sudo cat >./aljazeera.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(youtube-dl -g -f 95 https://www.youtube.com/user/AlJazeeraEnglish/live)
+        EOL
+    - name: Get antv.m3u8
+      run: |
+        touch ./antv.m3u8
+        sudo cat >./antv.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(youtube-dl -g -f hls-4 https://www.dailymotion.com/embed/video/x8chy4s)
+        EOL
+    - name: Get arirangtv.m3u8
+      run: |
+        touch ./arirangtv.m3u8
+        sudo cat >./arirangtv.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(youtube-dl -g -f 95 https://www.youtube.com/c/ArirangCoKrTV/live)
+        EOL
+    - name: Get asot.m3u8
+      run: |
+        touch ./asot.m3u8
+        sudo cat >./asot.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(youtube-dl -g -f 95 https://www.youtube.com/channel/UCalCDSmZAYD73tqVZ4l8yJg/live)
+        EOL
+    - name: Get beritasatu.m3u8
+      run: |
+        touch ./beritasatu.m3u8
+        sudo cat >./beritasatu.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(youtube-dl -g https://www.vidio.com/live/6165-beritasatu)
+        EOL
+    - name: Get dwnews.m3u8
+      run: |
+        touch ./dwnews.m3u8
+        sudo cat >./dwnews.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(youtube-dl -g -f 94 https://www.youtube.com/c/dwnews/live)
+        EOL
+    - name: Get france24.m3u8
+      run: |
+        touch ./france24.m3u8
+        sudo cat >./france24.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(youtube-dl -g -f 95 https://www.youtube.com/c/FRANCE24English/live)
+        EOL
+    - name: Get goodlife.m3u8
+      run: |
+        touch ./goodlife.m3u8
+        sudo cat >./goodlife.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(youtube-dl -g https://www.youtube.com/c/TheGoodLiferadio/live)
+        EOL
+    - name: Get idol.m3u8
+      run: |
+        touch ./idol.m3u8
+        sudo cat >./idol.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(youtube-dl --proxy socks5://9Pri1bvM:tTTXgWaOxzYG@sin.socks.ipvanish.com:1080/ -g -f 480p https://www.twitch.tv/nihonongakukaitv)
+        EOL
+    - name: Get indiatoday.m3u8
+      run: |
+        touch ./indiatoday.m3u8
+        sudo cat >./indiatoday.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(youtube-dl -g -f 95 https://www.youtube.com/c/indiatoday/live)
+        EOL
+    - name: Get indosiar.m3u8
+      run: |
+        touch ./indosiar.m3u8
+        sudo cat >./indosiar.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(youtube-dl -g https://www.vidio.com/live/205-indosiar)
+        EOL
+    - name: Get jpopsong.m3u8
+      run: |
+        touch ./jpopsong.m3u8
+        sudo cat >./jpopsong.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(youtube-dl -g -f 94 https://www.youtube.com/watch?v=HocqI9EW-ak)
+        EOL
+    - name: Get kompastv.m3u8
+      run: |
+        touch ./kompastv.m3u8
+        sudo cat >./kompastv.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(youtube-dl -g -f 95 https://www.youtube.com/c/kompastv/live)
+        EOL
+    - name: Get kpop.m3u8
+      run: |
+        touch ./kpop.m3u8
+        sudo cat >./kpop.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(youtube-dl -g https://www.youtube.com/c/TheKPOP/live)
+        EOL
+    - name: Get mafi2a.m3u8
+      run: |
+        touch ./mafi2a.m3u8
+        sudo cat >./mafi2a.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=540000
+        $(youtube-dl -g https://ok.ru/video/3099174903444)
+        EOL
+    - name: Get metrotv.m3u8
+      run: |
+        touch ./metrotv.m3u8
+        sudo cat >./metrotv.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(youtube-dl -g -f 300 https://www.youtube.com/c/MetrotvnewsOfficial/live)
+        EOL
+    - name: Get moji.m3u8
+      run: |
+        touch ./moji.m3u8
+        sudo cat >./moji.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=540000
+        $(youtube-dl -g https://www.vidio.com/live/206-moji)
+        EOL
+    - name: Get ncs1.m3u8
+      run: |
+        touch ./ncs1.m3u8
+        sudo cat >./ncs1.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(youtube-dl -g -f 94 https://youtu.be/7tNtU5XFwrU)
+        EOL
+    - name: Get nettv.m3u8
+      run: |
+        touch ./nettv.m3u8
+        sudo cat >./nettv.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=540000
+        $(youtube-dl -g -f 95 https://www.youtube.com/channel/UC1-ATnDVEwKT6-0aEeJ2ibA/live)
+        EOL
+    - name: Get radiometal.m3u8
+      run: |
+        touch ./radiometal.m3u8
+        sudo cat >./radiometal.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(youtube-dl -g -f hls-2 https://vk.com/video-12357723_456239136)
+        EOL
+    - name: Get ritsatv.m3u8
+      run: |
+        touch ./ritsatv.m3u8
+        sudo cat >./ritsatv.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(youtube-dl -g -f hls-4797 https://ok.ru/live/6236642418231)
+        EOL
+    - name: Get rt.m3u8
+      run: |
+        touch ./rt.m3u8
+        sudo cat >./rt.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(youtube-dl -g https://vk.com/video-154921046_456246797)
+        EOL
+    - name: Get rtv.m3u8
+      run: |
+        touch ./rtv.m3u8
+        sudo cat >./rtv.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(youtube-dl -g https://www.vidio.com/live/1561-rtv)
+        EOL
+    - name: Get sctv.m3u8
+      run: |
+        touch ./sctv.m3u8
+        sudo cat >./sctv.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(youtube-dl -g https://www.vidio.com/live/204-sctv)
+        EOL
+    - name: Get skynews.m3u8
+      run: |
+        touch ./skynews.m3u8
+        sudo cat >./skynews.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(youtube-dl -g -f 95 https://youtu.be/9Auq9mYxFEE)
+        EOL
+    - name: Get trtworld.m3u8
+      run: |
+        touch ./trtworld.m3u8
+        sudo cat >./trtworld.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(youtube-dl -g -f 95 https://www.youtube.com/c/trtworld/live)
+        EOL
+    - name: Get tvone.m3u8
+      run: |
+        touch ./tvone.m3u8
+        sudo cat >./tvone.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(youtube-dl -g -f 95 https://www.youtube.com/c/tvOneNews/live)
+        EOL
+    - name: Get unitednations.m3u8
+      run: |
+        touch ./unitednations.m3u8
+        sudo cat >./unitednations.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=540000
+        $(youtube-dl -g -f 95 https://www.youtube.com/c/unitednations/live)
+        EOL
+    - name: Get wion.m3u8
+      run: |
+        touch ./wion.m3u8
+        sudo cat >./wion.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(youtube-dl -g -f 95 https://www.youtube.com/c/WION/live)
+        EOL
+
+    - name : Upload artifact
+      uses: actions/upload-artifact@master
+      with:
+        name: YTlive m3u8
+        path: .
+    - name: Git push assets to "YTlive" branch
+      run: |
+        git init
+        git config --local user.name "actions"
+        git config --local user.email "action@github.com"
+        git checkout -b YTlive
+        git add .
+        git commit -m "Update YTlive"
+        git remote add origin "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
+        git push -f -u origin YTlive
