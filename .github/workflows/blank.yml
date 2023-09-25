@@ -23,7 +23,7 @@ jobs:
          ./yt-dlp.exe -g https://vk.com/video-137060944_456240071 > ./mafi2a.m3u8
          ./yt-dlp --proxy socks5://9Pri1bvM:tTTXgWaOxzYG@sin.socks.ipvanish.com:1080/ -g https://www.vidio.com/live/206-moji > ./moji.m3u8
          ./yt-dlp.exe -g -f hls-2 https://vk.com/video-12357723_456239136 > ./radiometal.m3u8
-         ./yt-dlp.exe -g hls-4797 https://ok.ru/live/6236642418231 > ./ritsatv.m3u8
+         ./yt-dlp.exe -g https://ok.ru/live/6236642418231 > ./ritsatv.m3u8
          ./yt-dlp -g -f 95 https://www.youtube.com/c/unitednations/live  > ./unitednations.m3u8
         
         
