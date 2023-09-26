@@ -12,14 +12,14 @@ jobs:
         curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp.exe -o ./yt-dlp.exe
         
         ./yt-dlp.exe -g -f 95 https://www.youtube.com/c/UCalCDSmZAYD73tqVZ4l8yJg/live > ./asot.m3u8
-        ./yt-dlp.exe -g -f 95 https://www.youtube.com/c/TheGoodLiferadio/live >> ./goodlife.m3u8;echo #EXTM3U >> ./goodlife.m3u8
+        ./yt-dlp.exe -g -f 95 https://www.youtube.com/c/TheGoodLiferadio/live >> ./goodlife.m3u8;echo "#EXTM3U >> ./goodlife.m3u8"
         
-        ./yt-dlp -g -f 480p http://twitch.tv/nihonongakukaitv >> ./idol.m3u8;echo "#EXTM3U" > ./idol.m3u8
+        ./yt-dlp -g -f 480p http://twitch.tv/nihonongakukaitv >> ./idol.m3u8;echo "#EXTM3U > ./idol.m3u8"
         
          
-         ./yt-dlp -g -f 95 https://www.youtube.com/c/indiatoday/live  >> ./india.m3u8;echo #EXTM3U > ./india.m3u8
+         ./yt-dlp -g -f 95 https://www.youtube.com/c/indiatoday/live  >> ./india.m3u8;echo "#EXTM3U > ./india.m3u8"
          ./yt-dlp.exe -g -f 95 https://www.youtube.com/watch?v=HocqI9EW-ak > ./jpopsong.m3u8
-         ./yt-dlp.exe -g -f 95 https://www.youtube.com/c/TheKPOP/live >> ./kpop.m3u8;echo #EXTM3U > ./kpop.m3u8
+         ./yt-dlp.exe -g -f 95 https://www.youtube.com/c/TheKPOP/live >> ./kpop.m3u8;echo "#EXTM3U > ./kpop.m3u8"
          ./yt-dlp.exe -g https://vk.com/video-137060944_456240071 > ./mafi2a.m3u8
          
          ./yt-dlp.exe -g -f hls-2 https://vk.com/video-12357723_456239136 > ./radiometal.m3u8
