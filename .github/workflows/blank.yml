@@ -12,7 +12,7 @@ jobs:
         curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp.exe -o ./yt-dlp.exe
         
         ./yt-dlp.exe -g -f 95 https://www.youtube.com/c/UCalCDSmZAYD73tqVZ4l8yJg/live > ./asot.m3u8
-        ./yt-dlp.exe -g -f 95 https://www.youtube.com/c/TheGoodLiferadio/live > ./goodlife.m3u8
+        ./yt-dlp.exe -g -f 95 https://www.youtube.com/c/TheGoodLiferadio/live >> ./goodlife.m3u8;echo #EXTM3U >> ./goodlife.m3u8
         
         ./yt-dlp -g -f 480p http://twitch.tv/nihonongakukaitv >> ./idol.m3u8;echo "#EXTM3U" > ./idol.m3u8
         
