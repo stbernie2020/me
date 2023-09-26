@@ -19,7 +19,7 @@ jobs:
          
          ./yt-dlp -g -f 95 https://www.youtube.com/c/indiatoday/live  >> ./india.m3u8;echo #EXTM3U > ./india.m3u8
          ./yt-dlp.exe -g -f 95 https://www.youtube.com/watch?v=HocqI9EW-ak > ./jpopsong.m3u8
-         ./yt-dlp.exe -g -f 95 https://www.youtube.com/c/TheKPOP/live > ./kpop.m3u8
+         ./yt-dlp.exe -g -f 95 https://www.youtube.com/c/TheKPOP/live >> ./kpop.m3u8;echo #EXTM3U > ./kpop.m3u8
          ./yt-dlp.exe -g https://vk.com/video-137060944_456240071 > ./mafi2a.m3u8
          
          ./yt-dlp.exe -g -f hls-2 https://vk.com/video-12357723_456239136 > ./radiometal.m3u8
