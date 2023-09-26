@@ -17,7 +17,7 @@ jobs:
         ./yt-dlp -g -f 480p http://twitch.tv/nihonongakukaitv >> ./idol.m3u8;echo "#EXTM3U" > ./idol.m3u8
         
          
-         ./yt-dlp -g -f 95 https://www.youtube.com/c/indiatoday/live  > ./india.m3u8;echo #EXTM3U > ./india.m3u8
+         ./yt-dlp -g -f 95 https://www.youtube.com/c/indiatoday/live  >> ./india.m3u8;echo #EXTM3U > ./india.m3u8
          ./yt-dlp.exe -g -f 95 https://www.youtube.com/watch?v=HocqI9EW-ak > ./jpopsong.m3u8
          ./yt-dlp.exe -g -f 95 https://www.youtube.com/c/TheKPOP/live > ./kpop.m3u8
          ./yt-dlp.exe -g https://vk.com/video-137060944_456240071 > ./mafi2a.m3u8
