@@ -33,7 +33,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(yt-dlp -g -f 95 https://www.youtube.com/user/AlJazeeraEnglish/live)
+        $(yt-dlp -g -f 95 https://www.youtube.com/@AlJazeeraEnglish/live)
         EOL
     - name: Get antv.m3u8
       run: |
@@ -51,7 +51,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(yt-dlp -g -f 95 https://www.youtube.com/c/ArirangCoKrTV/live)
+        $(yt-dlp -g -f 95 https://www.youtube.com/@KOREAarirangTV/live)
         EOL
     - name: Get asot.m3u8
       run: |
@@ -60,7 +60,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(yt-dlp -g -f 95 https://www.youtube.com/channel/UCalCDSmZAYD73tqVZ4l8yJg/live)
+        $(yt-dlp -g -f 95 https://www.youtube.com/@astateoftrance/live)
         EOL
     - name: Get btv.m3u8
       run: |
@@ -78,7 +78,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(yt-dlp -g -f 94 https://www.youtube.com/c/dwnews/live)
+        $(yt-dlp -g -f 94 https://www.youtube.com/@dwnews/live)
         EOL
     - name: Get france24.m3u8
       run: |
@@ -87,7 +87,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(yt-dlp -g -f 95 https://www.youtube.com/c/FRANCE24English/live)
+        $(yt-dlp -g -f 95 https://www.youtube.com/@France24_en/live)
         EOL
     - name: Get goodlife.m3u8
       run: |
@@ -96,7 +96,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(yt-dlp -g https://www.youtube.com/c/TheGoodLiferadio/live)
+        $(yt-dlp -g https://www.youtube.com/@TheGoodLiferadio/live)
         EOL
     - name: Get idol.m3u8
       run: |
@@ -114,7 +114,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(yt-dlp -g -f 95 https://www.youtube.com/c/indiatoday/live)
+        $(yt-dlp -g -f 95 https://www.youtube.com/@indiatoday/live)
         EOL
     - name: Get jpopsong.m3u8
       run: |
@@ -132,7 +132,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(yt-dlp -g -f 95 https://www.youtube.com/c/kompastv/live)
+        $(yt-dlp -g -f 95 https://www.youtube.com/@kompastv/live)
         EOL
     - name: Get kpop.m3u8
       run: |
@@ -141,7 +141,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(yt-dlp -g https://www.youtube.com/c/TheKPOP/live)
+        $(yt-dlp -g https://www.youtube.com/@TheKPOP/live)
         EOL
     - name: Get mafi2a.m3u8
       run: |
@@ -168,7 +168,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(yt-dlp -g -f 94 https://www.youtube.com/c/MetrotvnewsOfficial/live)
+        $(yt-dlp -g -f 94 https://www.youtube.com/@metrotvnews/live)
         EOL
     - name: Get ncs1.m3u8
       run: |
@@ -177,7 +177,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(yt-dlp -g -f 94 https://youtu.be/7tNtU5XFwrU)
+        $(yt-dlp -g -f 94 https://www.youtube.com/@NCSArcade/live)
         EOL
     - name: Get radiometal.m3u8
       run: |
@@ -213,7 +213,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(yt-dlp -g -f 95 https://www.youtube.com/c/trtworld/live)
+        $(yt-dlp -g -f 95 https://www.youtube.com/@trtworld/live)
         EOL
     - name: Get tvone.m3u8
       run: |
@@ -222,7 +222,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(yt-dlp -g -f 95 https://www.youtube.com/c/tvOneNews/live)
+        $(yt-dlp -g -f 95 https://www.youtube.com/@tvOneNews/live)
         EOL
     - name: Get unitednations.m3u8
       run: |
@@ -231,7 +231,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=540000
-        $(yt-dlp -g -f 95 https://www.youtube.com/c/unitednations/live)
+        $(yt-dlp -g -f 95 https://www.youtube.com/@unitednations/live)
         EOL
 
     - name : Upload artifact
