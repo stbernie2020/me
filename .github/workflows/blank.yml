@@ -42,7 +42,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(yt-dlp -g -f 720p https://www.twitch.tv/antv_digimed)
+        $(yt-dlp -g -f 720p https://www.vidio.com/live/782-antv)
         EOL
     - name: Get arirangtv.m3u8
       run: |
@@ -61,6 +61,15 @@ jobs:
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
         $(yt-dlp -g -f 95 https://www.youtube.com/channel/UCalCDSmZAYD73tqVZ4l8yJg/live)
+        EOL
+    - name: Get btv.m3u8
+      run: |
+        touch ./btv.m3u8
+        sudo cat >./btv.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(yt-dlp -g -f 720p https://www.vidio.com/live/6165-btv)
         EOL
     - name: Get dwnews.m3u8
       run: |
@@ -178,6 +187,15 @@ jobs:
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
         $(yt-dlp -g https://ok.ru/live/6236642418231)
+        EOL
+    - name: Get sctv.m3u8
+      run: |
+        touch ./sctv.m3u8
+        sudo cat >./sctv.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(yt-dlp -f 720p-1 -g https://www.vidio.com/live/204-sctv)
         EOL
     - name: Get trtworld.m3u8
       run: |
