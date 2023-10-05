@@ -152,6 +152,15 @@ jobs:
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=540000
         $(yt-dlp -g https://ok.ru/video/4403826925204)
         EOL
+    - name: Get mentaritv.m3u8
+      run: |
+        touch ./mentaritv.m3u8
+        sudo cat >./mentaritv.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(yt-dlp -g -f 720p https://www.vidio.com/live/8237-mentari-tv)
+        EOL
     - name: Get metrotv.m3u8
       run: |
         touch ./metrotv.m3u8
