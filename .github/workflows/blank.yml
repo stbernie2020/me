@@ -114,7 +114,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(yt-dlp -g https://www.youtube.com/watch?v=HocqI9EW-ak)
+        $(yt-dlp -g -f 94 https://www.youtube.com/@topjpop2023/live)
         EOL
     - name: Get kompastv.m3u8
       run: |
