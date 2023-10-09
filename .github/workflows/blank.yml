@@ -105,7 +105,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(yt-dlp -vU -g https://www.youtube.com/@i24NEWS_EN/live)
+        $(yt-dlp -g https://www.youtube.com/@i24NEWS_EN/live)
         EOL        
     - name: Get idol.m3u8
       run: |
