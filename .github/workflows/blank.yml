@@ -35,15 +35,6 @@ jobs:
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
         $(yt-dlp -g -f 95 https://www.youtube.com/@AlJazeeraEnglish/live)
         EOL
-    - name: Get antv.m3u8
-      run: |
-        touch ./antv.m3u8
-        sudo cat >./antv.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(yt-dlp -g -f 720p https://www.vidio.com/live/782-antv)
-        EOL
     - name: Get arirangtv.m3u8
       run: |
         touch ./arirangtv.m3u8
@@ -61,15 +52,6 @@ jobs:
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
         $(yt-dlp -g -f 95 https://www.youtube.com/@astateoftrance/live)
-        EOL
-    - name: Get btv.m3u8
-      run: |
-        touch ./btv.m3u8
-        sudo cat >./btv.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(yt-dlp -g -f 720p https://www.vidio.com/live/6165-btv)
         EOL
     - name: Get dwnews.m3u8
       run: |
@@ -170,15 +152,6 @@ jobs:
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=540000
         $(yt-dlp -g https://ok.ru/video/4403826925204)
         EOL
-    - name: Get mentaritv.m3u8
-      run: |
-        touch ./mentaritv.m3u8
-        sudo cat >./mentaritv.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(yt-dlp -g -f 720p https://www.vidio.com/live/8237-mentari-tv)
-        EOL
     - name: Get metrotv.m3u8
       run: |
         touch ./metrotv.m3u8
@@ -186,7 +159,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(yt-dlp -g -f 94 https://www.youtube.com/@metrotvnews/live)
+        $(yt-dlp -g -f 95 https://www.youtube.com/@metrotvnews/live)
         EOL
     - name: Get nuclear.m3u8
       run: |
@@ -200,7 +173,7 @@ jobs:
     - name: Get nuclear480.m3u8
       run: |
         touch ./nuclear480.m3u8
-        sudo cat >./nuclear480.m3u8 <<EOL
+        sudo cat >.nuclear480.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
@@ -223,15 +196,6 @@ jobs:
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
         $(yt-dlp -g https://ok.ru/live/6236642418231)
-        EOL
-    - name: Get sctv.m3u8
-      run: |
-        touch ./sctv.m3u8
-        sudo cat >./sctv.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(yt-dlp -f 720p-1 -g https://www.vidio.com/live/204-sctv)
         EOL
     - name: Get trtworld.m3u8
       run: |
