@@ -168,7 +168,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=540000
-        $(yt-dlp -g https://ok.ru/video/4403826925204)
+        $(yt-dlp -g https://vk.com/video-137060944_456240146)
         EOL
     - name: Get metrotv.m3u8
       run: |
