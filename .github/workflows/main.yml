@@ -12,9 +12,12 @@ jobs:
         sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
         sudo chmod a+rx /usr/local/bin/yt-dlp
     - name: Get abcnewsau.m3u8
-      run: |
+      run: |      
         touch ./abcnewsau.m3u8
         sudo cat >./abcnewsau.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
         $(yt-dlp -g -f 95 https://www.youtube.com/c/NewsOnABC/live)
         EOL
     - name: Get abcnewsus.m3u8
@@ -114,7 +117,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(yt-dlp -g -f 480p http://twitch.tv/nihonongakukaitv)
+        $(yt-dlp --print urls -f 480p http://twitch.tv/nihonongakukaitv)
         EOL
     - name: Get indiatoday.m3u8
       run: |
@@ -125,7 +128,24 @@ jobs:
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
         $(yt-dlp -g -f 95 https://www.youtube.com/@indiatoday/live)
         EOL
-
+    - name: Get jpopsong.m3u8
+      run: |
+        touch ./jpopsong.m3u8
+        sudo cat >./jpopsong.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=540000
+        $(yt-dlp -g -f 95 https://youtu.be/itzlqSoyd4c)
+        EOL
+    - name: Get jpopsong2.m3u8
+      run: |
+        touch ./jpopsong2.m3u8
+        sudo cat >./jpopsong2.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=540000
+        $(yt-dlp -g -f 95 https://www.youtube.com/channel/UC1zF_AmBDCcFyZgwL8nAOhA/live)
+        EOL
     - name: Get kompastv.m3u8
       run: |
         touch ./kompastv.m3u8
@@ -160,7 +180,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=540000
-        $(yt-dlp -g https://vk.com/video-137060944_456240146)
+        $(yt-dlp --print urls https://vk.com/video-137060944_456240146)
         EOL
     - name: Get metrotv.m3u8
       run: |
@@ -214,7 +234,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(yt-dlp -g -f hls-3 https://m.vk.com/video-122792749_456242041?list=ln-eA6nXepvIKxOkmZBOj)
+        $(yt-dlp --print urls https://m.vk.com/video-122792749_456242041?list=ln-eA6nXepvIKxOkmZBOj)
         EOL
     - name: Get trtworld.m3u8
       run: |
@@ -243,6 +263,7 @@ jobs:
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=540000
         $(yt-dlp -g -f 95 https://www.youtube.com/@unitednations/live)
         EOL
+        
     
         
     - name : Upload artifact
