@@ -26,25 +26,25 @@ jobs:
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
         $(yt-dlp --print urls https://www.youtube.com/@PeppaPigChineseOfficial/live)
         EOL
-    - name: Get LionFamily.m3u8
+    - name: Get jpop.m3u8
       run: |
-        touch ./LionFamily.m3u8
-        sudo cat >./LionFamily.m3u8 <<EOL
+        touch ./jpop.m3u8
+        sudo cat >./jpop.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --print urls https://www.youtube.com/@VexTrexKidsCartoon/live)
+        $(yt-dlp --print urls https://youtu.be/itzlqSoyd4c)
         EOL
 
 
-    - name: Get CNN-News18.m3u8
+    - name: Get idol.m3u8
       run: |
-        touch ./CNN-News18.m3u8
-        sudo cat >./CNN-News18.m3u8 <<EOL
+        touch ./idol.m3u8
+        sudo cat >./idol.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --print urls https://www.youtube.com/@cnnnews18/live)
+        $(yt-dlp --print urls http://twitch.tv/nihonongakukaitv)
         EOL
 
     - name : Upload artifact
