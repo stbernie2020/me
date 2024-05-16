@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: epg
 
 # Controls when the workflow will run
 on:
@@ -10,6 +10,9 @@ on:
   pull_request:
     branches: [ "master" ]
 
+schedule:
+    - cron: "0 13 * * *"
+    
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -28,3 +31,19 @@ jobs:
       # Runs a single command using the runners shell
       - name: DL EPG
         run: wget https://www.bevy.be/generate/7Z1l92Ma0H.xml
+
+    - name : Upload artifact
+      uses: actions/upload-artifact@master
+      with:
+        name: master epg
+        path: .
+        - name: Git push assets to "master" branch
+      run: |
+        git init
+        git config --local user.name "actions"
+        git config --local user.email "action@github.com"
+        git checkout -b master
+        git add .
+        git commit -m "Update master"
+        git remote add origin "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
+        git push -f -u origin master
