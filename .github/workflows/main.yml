@@ -65,14 +65,14 @@ jobs:
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
         $(yt-dlp -g -f 95 https://www.youtube.com/@astateoftrance/live)
         EOL
-    - name: Get breakbeat.m3u8
+    - name: Get edm.m3u8
       run: |
-        touch ./breakbeat.m3u8
-        sudo cat >./breakbeat.m3u8 <<EOL
+        touch ./edm.m3u8
+        sudo cat >./edm.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(yt-dlp -g https://www.youtube.com/watch?v=GcZFeJIRGuw)
+        $(yt-dlp -g -f 94 https://www.youtube.com/channel/UCtuR8Un6vaHBQGxEylax15g/live)
         EOL
     - name: Get dwnews.m3u8
       run: |
