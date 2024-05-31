@@ -9,7 +9,9 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Download epg
-      run : wget https://www.bevy.be/generate/7Z1l92Ma0H.xml      
+      run : |
+      
+        wget https://www.bevy.be/generate/7Z1l92Ma0H.xml      
       
         git config --global user.name "actions"
         git config --global user.email "action@github.com"
