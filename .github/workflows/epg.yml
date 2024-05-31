@@ -15,15 +15,15 @@ jobs:
     - name : Upload artifact
       uses: actions/upload-artifact@master
       with:
-        name: YTlive m3u8
+        name: EPGXML epg
         path: .
-    - name: Git push assets to "YTlive" branch
+    - name: Git push assets to "EPGXML" branch
       run: |
         git init
         git config --local user.name "actions"
         git config --local user.email "action@github.com"
-        git checkout -b YTlive
+        git checkout -b EPGXML
         git add .
-        git commit -m "Update YTlive"
+        git commit -m "Update EPGXML"
         git remote add origin "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
-        git push -f -u origin YTlive
+        git push -f -u origin EPGXML
