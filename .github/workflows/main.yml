@@ -264,7 +264,8 @@ jobs:
         $(yt-dlp -g -f 95 https://www.youtube.com/@unitednations/live)
         EOL
         
-    
+     - name: Get 7Z1l92Ma0H.xml
+      run: wget https://www.bevy.be/generate/7Z1l92Ma0H.xml
         
     - name : Upload artifact
       uses: actions/upload-artifact@master
