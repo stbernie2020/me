@@ -6,11 +6,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-       steps:
+    steps:
     - uses: actions/checkout@v4
     - name: Download epg
-    run: wget https://www.bevy.be/generate/7Z1l92Ma0H.xml        
-  
+        run :wget https://www.bevy.be/generate/7Z1l92Ma0H.xml      
+      
         git config --local user.name "actions"
         git config --local user.email "action@github.com"
         git add .
