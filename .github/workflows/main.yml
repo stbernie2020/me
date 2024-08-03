@@ -109,7 +109,7 @@ jobs:
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=540000,AUDIO="xx"
         $(yt-dlp -g -f 270 https://www.youtube.com/channel/UC692xZtBqEI2QM5kXbnf4tg/live)
-        #EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="xx",CHANNELS="2",NAME="English",LANGUAGE="eng",DEFAULT=YES,AUTOSELECT=YES,URI=" $(yt-dlp -g -f 234 https://www.youtube.com/channel/UC692xZtBqEI2QM5kXbnf4tg)"
+        #EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="xx",CHANNELS="2",NAME="English",LANGUAGE="eng",DEFAULT=YES,AUTOSELECT=YES,URI="$(yt-dlp -g -f 234 https://www.youtube.com/channel/UC692xZtBqEI2QM5kXbnf4tg/live)"
         EOL        
     - name: Get idol.m3u8
       run: |
@@ -210,7 +210,7 @@ jobs:
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=540000,AUDIO="xx"
         $(yt-dlp -g -f 232 https://www.youtube.com/@NuclearBlastRecords/live)
-        #EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="xx",CHANNELS="2",NAME="English",LANGUAGE="eng",DEFAULT=YES,AUTOSELECT=YES,URI=" $(yt-dlp -g -f 234 https://www.youtube.com/@NuclearBlastRecords/live)"
+        #EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="xx",CHANNELS="2",NAME="English",LANGUAGE="eng",DEFAULT=YES,AUTOSELECT=YES,URI="$(yt-dlp -g -f 234 https://www.youtube.com/@NuclearBlastRecords/live)"
         EOL
     - name: Get nuclear480.m3u8
       run: |
