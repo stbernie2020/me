@@ -107,8 +107,9 @@ jobs:
         sudo cat >./ibiza.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(yt-dlp -g -f 96 https://www.youtube.com/watch?v=BNTtxFLfNis)
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=540000,AUDIO="xx"
+        $(yt-dlp -g -f 270 https://www.youtube.com/channel/UC692xZtBqEI2QM5kXbnf4tg/live)
+        #EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="xx",CHANNELS="2",NAME="English",LANGUAGE="eng",DEFAULT=YES,AUTOSELECT=YES,URI=" $(yt-dlp -g -f 234 https://www.youtube.com/channel/UC692xZtBqEI2QM5kXbnf4tg)"
         EOL        
     - name: Get idol.m3u8
       run: |
@@ -145,7 +146,7 @@ jobs:
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=540000,AUDIO="xx"
         $(yt-dlp -g -f 232 https://www.youtube.com/channel/UC1zF_AmBDCcFyZgwL8nAOhA/live)
-        #EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="xx",CHANNELS="2",NAME="English",LANGUAGE="eng",DEFAULT=YES,AUTOSELECT=YES,URI="$(yt-dlp -g -f 233 https://www.youtube.com/channel/UC1zF_AmBDCcFyZgwL8nAOhA/live)"
+        #EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="xx",CHANNELS="2",NAME="English",LANGUAGE="eng",DEFAULT=YES,AUTOSELECT=YES,URI="$(yt-dlp -g -f 234 https://www.youtube.com/channel/UC1zF_AmBDCcFyZgwL8nAOhA/live)"
         EOL
     - name: Get kompastv.m3u8
       run: |
