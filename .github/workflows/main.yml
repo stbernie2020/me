@@ -46,7 +46,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=540000,AUDIO="xx"
-        $(yt-dlp -g -f 232 https://www.youtube.com/channel/UCGCZAYq5Xxojl_tSXcVJhiQ/live)
+        $(yt-dlp -g -f 232 https://youtu.be/coYw-eVU0Ks)
         #EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="xx",CHANNELS="2",NAME="English",LANGUAGE="eng",DEFAULT=YES,AUTOSELECT=YES,URI="$(yt-dlp -g -f 234 https://www.youtube.com/UCGCZAYq5Xxojl_tSXcVJhiQ/live)"
         EOL
     - name: Get arirangtv.m3u8
