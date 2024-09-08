@@ -168,7 +168,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=540000,AUDIO="xx"
-        $(yt-dlp -g -f 270 https://www.youtube.com/@TheKPOP/live)
+        $(yt-dlp -g -f 95 https://www.youtube.com/embed/live_stream?channel=UCoRXPcv8XK5fAplLbk9PTww)
         #EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="xx",CHANNELS="2",NAME="English",LANGUAGE="eng",DEFAULT=YES,AUTOSELECT=YES,URI="$(yt-dlp -g -f 234 https://www.youtube.com/@TheKPOP/live)"
         EOL
     - name: Get liputan6.m3u8
