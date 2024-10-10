@@ -1,0 +1,4 @@
+#EXTM3U
+#EXT-X-VERSION:3
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=540000
+rtmp://vkvsd50.mycdn.me/playback/6258783562721?stkn=WAATRtUcwnGW7M-ne1KcEEh9S2tybuwLmc_6vvW9hfHPAij5ESblxElWPyfFz8EyLIlUL4wL40U&uid=0&sp=uid,sp&sig=vlibqm4nyu&fromCache=1
